@@ -94,16 +94,13 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
                       'label': 'Is Contained By',
                       'name': 'is_contained_by'},
                   {'input_type': 'select_multiple',
-                      'label': 'Shares At Least '
-                      'One Element With',
+                      'label': 'Shares At Least One Element With',
                       'name': 'shares_at_least_one_element_with'},
                   {'input_type': 'select_multiple',
-                      'label': 'Shares Exactly One '
-                      'Element With',
+                      'label': 'Shares Exactly One Element With',
                       'name': 'shares_exactly_one_element_with'},
                   {'input_type': 'select_multiple',
-                      'label': 'Shares No Elements '
-                      'With',
+                      'label': 'Shares No Elements With',
                       'name': 'shares_no_elements_with'}],
               'string': [
                   {'input_type': 'text',
