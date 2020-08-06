@@ -29,9 +29,9 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
                   'name': 'Filter',
                   'label': 'filter',
                   'params': [{
-                      'name': 'restricted_property',
-                      'label': 'Restricted Property',
-                      'fieldType': 'select',
+                      'name': 'inclusion_rule',
+                      'label': 'Inclusion Rule',
+                      'fieldType': 'select_multiple',
                       'options': [
                           {
                               'name': '123',
@@ -42,6 +42,15 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
                               'label': 'Kurti'
                           }
                           ]
+                  }]
+              },
+              {
+                  'name': 'dont_look_up_for_matching_phrase',
+                  'label': 'Dont Look Up Matching Phrase',
+                  'params': [{
+                      'name': 'dont_look_up_matching_phrase',
+                      'label': 'Dont Look Up Matching Phrase',
+                      'fieldType': 'none',
                   }]
               },
               ],
