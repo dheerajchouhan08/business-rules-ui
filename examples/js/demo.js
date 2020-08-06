@@ -26,8 +26,8 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
             }],
           "actions": [
               {
-                  'name': 'Filter',
-                  'label': 'filter',
+                  'name': 'filter',
+                  'label': 'Filter',
                   'params': [{
                       'name': 'inclusion_rule',
                       'label': 'Inclusion Rule',
