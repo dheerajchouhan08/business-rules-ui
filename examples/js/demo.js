@@ -19,74 +19,32 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
                 ]
             },
             {
-                'field_type': 'select',
-                'label': 'Match Type',
-                'name': 'match_type',
-                'options': ['Contains', 'Exactly Matches']
-            },
-            {
                 'field_type': 'string',
-                'label': 'Phrase',
-                'name': 'phrase',
+                'label': 'Search Term',
+                'name': 'search_term',
                 'options': []
             }],
           "actions": [
               {
-                  'name': 'enter_filter_operation',
-                  'label': 'Enter Filter Operation',
+                  'name': 'Filter',
+                  'label': 'filter',
                   'params': [{
-                      'name': 'filter_operation',
-                      'label': 'Filter Operation',
+                      'name': 'restricted_property',
+                      'label': 'Restricted Property',
                       'fieldType': 'select',
                       'options': [
                           {
-                              'name': 'only_include',
-                              'label': 'Only Include'
+                              'name': '123',
+                              'label': 'Saree'
                           },
                           {
-                              'name': 'exclude',
-                              'label': 'Exclude'
+                              'name': '234',
+                              'label': 'Kurti'
                           }
                           ]
                   }]
               },
-              {
-                  'name': 'enter_operator',
-                  'label': 'Enter Operator',
-                  'params': [{
-                      'name': 'operator',
-                      'fieldType': 'select',
-                      'label': 'Operator',
-                      'options': [
-                          {'label': 'IN', 'name': 'IN'}
-                          ]
-                  }]
-              },
-              {
-                  'name': 'enter_property',
-                  'label': 'Enter Property',
-                  'params': [{
-                      'name': 'property',
-                      'label': 'Property',
-                      'fieldType': 'select',
-                      'options': [
-                          {'label': 'Category', 'name': 'category'}
-                          ]
-                  }]
-              },
-              {
-                  'name': 'enter_synonym',
-                  'label': 'Enter Synonym',
-                  'params': [{
-                      'label': 'Synonym/Hyponym',
-                      'name': 'synonym_or_hyponym',
-                      'fieldType': 'select',
-                      'options': [
-                          {'label': 'Synonym', 'name': 'synonym'},
-                          {'label': 'Hyponym', 'name': 'hyponym'}
-                          ]
-                  }]
-              }],
+              ],
           "variable_type_operators": {
               'boolean': [
                   {
@@ -128,13 +86,10 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
               'select': [
                   {
                       'input_type': 'select',
-                      'label': 'Contains',
-                      'name': 'contains'},
-                  {
-                      'input_type': 'select',
-                      'label': 'Does Not Contain',
-                      'name': 'does_not_contain'
-                  }],
+                      'label': 'EQUALS',
+                      'name': 'equals'
+                  },
+                  ],
               'select_multiple': [
                   {
                       'input_type': 'select_multiple',
@@ -169,34 +124,14 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
                   },
                   {
                       'input_type': 'text',
-                      'label': 'Ends With',
-                      'name': 'ends_with'
-                  },
-                  {
-                      'input_type': 'text',
-                      'label': 'Equal To',
-                      'name': 'equal_to'
-                  },
-                  {
-                      'input_type': 'text',
-                      'label': 'Equal To (case insensitive)',
-                      'name': 'equal_to_case_insensitive'
+                      'label': 'Matches (case insensitive)',
+                      'name': 'matches_case_insensitive'
                   },
                   {
                       'input_type': 'text',
                       'label': 'Matches Regex',
                       'name': 'matches_regex'
                   },
-                  {
-                      'input_type': 'none',
-                      'label': 'Non Empty',
-                      'name': 'non_empty'
-                  },
-                  {
-                      'input_type': 'text',
-                      'label': 'Starts With',
-                      'name': 'starts_with'
-                  }
                   ]}
     };
   };
