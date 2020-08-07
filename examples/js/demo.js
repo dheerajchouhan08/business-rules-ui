@@ -31,7 +31,7 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
                   'params': [{
                       'name': 'inclusion_rule',
                       'label': 'Inclusion Rule',
-                      'fieldType': 'select_multiple',
+                      'fieldType': 'select',
                       'options': [
                           {
                               'name': '123',
