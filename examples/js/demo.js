@@ -45,12 +45,22 @@ var conditions, actions, nameField, ageField, occupationField, submit, allData;
                   }]
               },
               {
-                  'name': 'dont_look_up_for_matching_phrase',
-                  'label': 'Dont Look Up Matching Phrase',
+                  'name': 'look_up_for_matching_phrase',
+                  'label': 'Look Up Matching Phrase',
                   'params': [{
-                      'name': 'dont_look_up_matching_phrase',
-                      'label': 'Dont Look Up Matching Phrase',
-                      'fieldType': 'none',
+                      'name': 'look_up',
+                      'label': 'Look Up',
+                      'fieldType': 'select',
+                      'options':[
+                          {
+                            'name': 'yes',
+                            'label': 'YES'
+                          },
+                          {
+                              'name': 'no',
+                              'label': 'NO'
+                          }
+                      ]
                   }]
               },
               ],
